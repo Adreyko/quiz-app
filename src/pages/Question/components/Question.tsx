@@ -106,13 +106,18 @@ const Question = ({
   return (
     <Card
       className={clsx(
-        'flex items-center flex-col gap-[45px] py-20 w-full md:w-1/2',
+        'flex items-center flex-col gap-[45px] py-20 w-full md:w-1/2 relative',
         {
           'px-0': currentQuestion?.type === 'bubble',
           'px-5': currentQuestion?.type !== 'bubble',
         }
       )}
     >
+      {Number(currentQuestion?.id) > 1 && (
+        <div role='button' onClick={onBack} className='absolute left-6 text-xl'>
+          <img src='/assets/caret.png' alt='back' />
+        </div>
+      )}
       <ProgressBar
         className={clsx(padding)}
         showTitle
@@ -125,13 +130,6 @@ const Question = ({
         <p className='text-sm text-[#C4C8CC]'>{currentQuestion?.hint}</p>
       </div>
       {renderAnswers()}
-      {Number(currentQuestion?.id) > 1 && (
-        <div className={clsx('w-full', padding)}>
-          <Button onClick={onBack} className={clsx('w-full')}>
-            Back
-          </Button>
-        </div>
-      )}
     </Card>
   );
 };
