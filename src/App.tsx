@@ -7,6 +7,7 @@ import {
   questionListFR,
 } from './shared/lib/mocks/question';
 import { setStorageData } from './shared/lib/helpers/setStorageData';
+import { IQuestion } from './pages/types/question';
 const initData = {
   English: questionListEn,
   French: questionListFR,
@@ -15,7 +16,7 @@ const initData = {
 };
 function App() {
   useEffect(() => {
-    setStorageData(initData);
+    setStorageData<IQuestion[]>(initData);
   }, []);
   return (
     <div className='app min-h-[100vh] flex justify-center'>

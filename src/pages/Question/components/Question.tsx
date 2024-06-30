@@ -15,6 +15,7 @@ import { Answers } from '../../types/answers';
 import clsx from 'clsx';
 import { textHighlighter } from '../../../shared/lib/helpers/textHighlighter';
 import Button from '../../../shared/ui/Button/Button';
+import { QuestionType } from '../../../shared/lib/consts/question';
 
 interface QuestionProps {
   currentQuestion?: IQuestion;
@@ -51,14 +52,14 @@ const Question = ({
 
   const renderAnswers = useCallback(() => {
     switch (currentQuestion?.type) {
-      case 'single-select':
+      case QuestionType.Single:
         return (
           <SingleSelect
             answers={currentQuestion.answers}
             selectProps={{ onSelect: setAnswers }}
           />
         );
-      case 'single-select-image':
+      case QuestionType.SingleImage:
         return (
           <SingleSelect
             selectProps={{
@@ -72,14 +73,14 @@ const Question = ({
             answers={currentQuestion.answers}
           />
         );
-      case 'multiple-select':
+      case QuestionType.Multiply:
         return (
           <MultiplySelect
             answers={currentQuestion.answers}
             selectProps={{ onSelect: setAnswers }}
           />
         );
-      case 'bubble':
+      case QuestionType.Bubble:
         return (
           <BubbleSelect
             answers={currentQuestion.answers}
