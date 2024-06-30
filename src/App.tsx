@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect } from 'react';
+import AppRouter from './providers/Router/components/AppRouter';
+import {
+  questionListDE,
+  questionListES,
+  questionListEn,
+  questionListFR,
+} from './shared/lib/mocks/question';
+import { setStorageData } from './shared/lib/helpers/setStorageData';
+const initData = {
+  English: questionListEn,
+  French: questionListFR,
+  German: questionListDE,
+  Spanish: questionListES,
+};
 function App() {
+  useEffect(() => {
+    setStorageData(initData);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app min-h-[100vh] flex justify-center'>
+      <AppRouter />
     </div>
   );
 }

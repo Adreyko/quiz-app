@@ -1,0 +1,243 @@
+import { IQuestion } from '../../../pages/types/question';
+
+export const questionListEn: IQuestion[] = [
+  {
+    id: '1',
+    question: 'What is your preferred language?',
+    hint: 'Choose language',
+    answers: ['English', 'French', 'German', 'Spanish'],
+    type: 'single-select',
+  },
+  {
+    id: '2',
+    question: 'What gender do you identify with?',
+    hint: 'Choose gender',
+    answers: ['Male', 'Female', 'Other'],
+    imageUrls: {
+      Male: '/assets/male.png',
+      Female: '/assets/female.png',
+      Other: '/assets/other.png',
+    },
+    type: 'single-select-image',
+  },
+  {
+    id: '3',
+    question: 'What is your age',
+    hint: 'Choose age',
+    answers: ['18-29', '30-39', '39+'],
+    type: 'single-select',
+  },
+  {
+    id: '4',
+    question: 'What do you hate the most in a book?',
+    hint: 'Please select',
+    answers: ['Lack of logic', 'Lack of humor'],
+    type: 'multiple-select',
+  },
+  {
+    id: '5',
+    question: 'What are your favorite topics?',
+    hint: 'Please select',
+    answers: [
+      'Actions',
+      'Romance',
+      'Bad Boy',
+      'Humor',
+      'Mystery',
+      'Adventure',
+      'Horror',
+    ],
+    imageUrls: {
+      Actions: '⚽️',
+      Romance: '💑',
+      'Bad Boy': '👿',
+      Humor: '😂',
+      Mystery: '🔍',
+      Adventure: '🚀',
+      Horror: '👻',
+    },
+
+    type: 'bubble',
+  },
+];
+
+export const questionListDE: IQuestion[] = [
+  {
+    id: '1',
+    question: 'What is your preferred language?',
+    hint: 'Choose language',
+    answers: ['English', 'French', 'German', 'Spanish'],
+    type: 'single-select',
+  },
+  {
+    id: '2',
+    question: 'Mit welchem Geschlecht identifizieren Sie sich?',
+    hint: 'Geschlecht auswählen',
+    answers: ['Männlich', 'Weiblich', 'Andere'],
+    imageUrls: {
+      Männlich: '/assets/male.png',
+      Weiblich: '/assets/female.png',
+      Andere: '/assets/other.png',
+    },
+    type: 'single-select-image',
+  },
+  {
+    id: '3',
+    question: 'Wie alt sind Sie?',
+    hint: 'Alter auswählen',
+    answers: ['18-29', '30-39', '39+'],
+    type: 'single-select',
+  },
+  {
+    id: '4',
+    question: 'Was hassen Sie am meisten an einem Buch?',
+    hint: 'bitte auswählen',
+    answers: ['Mangel an Logik', 'Mangel an Humor'],
+
+    type: 'multiple-select',
+  },
+  {
+    id: '5',
+    question: 'Was sind Ihre Lieblingsthemen?',
+    hint: 'bitte auswählen',
+    answers: [
+      'Action',
+      'Romantik',
+      'Bad Boy',
+      'Humor',
+      'Mystery',
+      'Abenteuer',
+      'Horror',
+    ],
+    imageUrls: {
+      Action: '⚽️',
+      Romantik: '💑',
+      'Bad Boy': '👿',
+      Humor: '😂',
+      Mystery: '🔍',
+      Abenteuer: '🚀',
+      Horror: '👻',
+    },
+    type: 'bubble',
+  },
+];
+
+export const questionListES: IQuestion[] = [
+  {
+    id: '1',
+    question: 'What is your preferred language?',
+    hint: 'choose language',
+    answers: ['English', 'French', 'German', 'Spanish'],
+    type: 'single-select',
+  },
+  {
+    id: '2',
+    question: '¿Con qué género te identificas?',
+    hint: 'elige el género',
+    answers: ['Masculino', 'Femenino', 'Otro'],
+    imageUrls: {
+      Masculino: '/assets/male.png',
+      Femenino: '/assets/female.png',
+      Otro: '/assets/other.png',
+    },
+    type: 'single-select-image',
+  },
+  {
+    id: '3',
+    question: '¿Cuántos años tienes?',
+    hint: 'elige la edad',
+    answers: ['18-29', '30-39', '39+'],
+    type: 'single-select',
+  },
+  {
+    id: '4',
+    question: '¿Qué odias más en un libro?',
+    hint: 'por favor selecciona',
+    answers: ['Falta de lógica', 'Falta de humor'],
+    type: 'multiple-select',
+  },
+  {
+    id: '5',
+    question: '¿Cuáles son tus temas favoritos?',
+    hint: 'por favor selecciona',
+    answers: [
+      'Acción',
+      'Romance',
+      'Chico Malo',
+      'Humor',
+      'Misterio',
+      'Aventura',
+      'Horror',
+    ],
+    imageUrls: {
+      Acción: '⚽️',
+      Romance: '💑',
+      'Chico Malo': '👿',
+      Humor: '😂',
+      Misterio: '🔍',
+      Aventura: '🚀',
+      Horror: '👻',
+    },
+    type: 'bubble',
+  },
+];
+
+export const questionListFR: IQuestion[] = [
+  {
+    id: '1',
+    question: 'What is your preferred language?',
+    hint: 'choose language',
+    answers: ['English', 'French', 'German', 'Spanish'],
+    type: 'single-select',
+  },
+  {
+    id: '2',
+    question: 'Avec quel genre vous identifiez-vous?',
+    hint: 'choisissez le genre',
+    answers: ['Homme', 'Femme', 'Autre'],
+    imageUrls: {
+      Homme: '/assets/male.png',
+      Femme: '/assets/female.png',
+      Autre: '/assets/other.png',
+    },
+    type: 'single-select-image',
+  },
+  {
+    id: '3',
+    question: 'Quel âge avez-vous?',
+    hint: "choisissez l'âge",
+    answers: ['18-29', '30-39', '39+'],
+    type: 'single-select',
+  },
+  {
+    id: '4',
+    question: "Qu'est-ce que vous détestez le plus dans un livre?",
+    hint: 'veuillez sélectionner',
+    answers: ['Manque de logique', "Manque d'humour"],
+    type: 'multiple-select',
+  },
+  {
+    id: '5',
+    question: 'Quels sont vos sujets préférés?',
+    hint: 'veuillez sélectionner',
+    answers: [
+      'Action',
+      'Romance',
+      'Bad Boy',
+      'Humour',
+      'Mystère',
+      'Aventure',
+      'Horreur',
+    ],
+    imageUrls: {
+      Action: '⚽️',
+      Romance: '💑',
+      'Bad Boy': '👿',
+      Humour: '😂',
+      Mystère: '🔍',
+      Aventure: '🚀',
+      Horreur: '👻',
+    },
+    type: 'bubble',
+  },
+];

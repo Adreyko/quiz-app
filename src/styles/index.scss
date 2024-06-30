@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './reset.scss';
+@import './variables/variables.scss';
+
+
+
+*::-webkit-scrollbar {
+    background: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.app {
+    background: var(--main-color);
+    min-height: 100vh;
+    color: var(--font-color);
+
+}
