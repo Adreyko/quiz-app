@@ -15,12 +15,12 @@ interface BubbleContainerProps {
   selectedBubbles?: string[];
 }
 
-const BubbleElement: React.FC<BubbleProps> = ({
+const BubbleElement = ({
   label,
   icon,
   onSelect,
   selectedBubbles,
-}) => {
+}: BubbleProps) => {
   const onSelectBubble = () => {
     onSelect?.(label);
   };
