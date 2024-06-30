@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Answers } from '../../../pages/types/answers';
+import { LOCAL_STORAGE_ANSWERS } from '../consts/storage';
 
 export const useAnswer = () => {
   const answersFromLocalStorage = JSON.parse(
-    localStorage.getItem('answers') ?? '[]'
+    localStorage.getItem(LOCAL_STORAGE_ANSWERS) ?? '[]'
   );
   const [answers, setAnswers] = useState<Answers[]>(answersFromLocalStorage);
 
   useEffect(() => {
-    localStorage.setItem('answers', JSON.stringify(answers));
+    localStorage.setItem(LOCAL_STORAGE_ANSWERS, JSON.stringify(answers));
   }, [answers]);
 
   const onSelectAnswer = (question: Answers) => {
@@ -24,7 +25,7 @@ export const useAnswer = () => {
       }
 
       localStorage.setItem(
-        'answers',
+        LOCAL_STORAGE_ANSWERS,
         JSON.stringify([...prevAnswers, question])
       );
       return [...prevAnswers, question];
@@ -33,7 +34,7 @@ export const useAnswer = () => {
 
   const resetAnswers = () => {
     setAnswers([]);
-    localStorage.removeItem('answers');
+    localStorage.removeItem(LOCAL_STORAGE_ANSWERS);
   };
 
   return { answers, onSelectAnswer, resetAnswers };

@@ -1,1 +1,1 @@
-export const LOCAL_STORAGE_ENGLISH = 'en';
+export const LOCAL_STORAGE_ANSWERS = 'answers';
