@@ -37,7 +37,7 @@ const BubbleElement: React.FC<BubbleProps> = ({
       )}
     >
       <div className='text-2xl'>{icon}</div>
-      <div className='text-[13px]/[16px]'>{label}</div>
+      <div className='text-xs/[16px]'>{label}</div>
     </div>
   );
 };

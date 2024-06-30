@@ -33,7 +33,7 @@ const Mail = () => {
       <Loader loadingText='Finding collections for you...' />
       <Card
         className={clsx(
-          'flex items-center flex-col  w-full justify-between  py-10'
+          'flex items-center flex-col  w-full justify-between  py-10 md:w-1/2'
         )}
       >
         <div className='flex items-center flex-col gap-[56px] w-full'>

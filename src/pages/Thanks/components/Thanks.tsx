@@ -19,7 +19,7 @@ const Thanks = () => {
   return (
     <Card
       className={clsx(
-        'flex items-center flex-col  w-full justify-between py-20'
+        'flex items-center flex-col  w-full justify-between py-20 md:w-1/2'
       )}
     >
       <div className='flex flex-col gap-4 items-center'>

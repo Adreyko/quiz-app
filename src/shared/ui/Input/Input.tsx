@@ -51,7 +51,7 @@ const Input: FC<InputProps> = memo((props: InputProps) => {
         placeholder={placeholder}
         onChange={onChangeHandler}
         className={clsx(
-          'bg-secondary px-[21px] py-5 rounded-[16px] w-full placeholder:text-[#C4C8CC80]',
+          'bg-secondary px-[21px] py-5 rounded-[16px] w-full placeholder:text-[#C4C8CC80] outline-none',
           {
             'border border-red-500': error && touched,
           }
