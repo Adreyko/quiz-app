@@ -7,6 +7,7 @@ import Button from '../../../../shared/ui/Button/Button';
 import Card from '../../../../shared/ui/Card/Card';
 import Input from '../../../../shared/ui/Input/Input';
 import Loader from '../../../../shared/ui/Loader/Loader';
+import { validateEmail } from '../../../../shared/lib/helpers/email';
 
 const Mail = () => {
   const [email, setEmail] = useState('');
@@ -16,11 +17,6 @@ const Mail = () => {
   }, []);
 
   const { onSelectAnswer } = useAnswer();
-
-  function validateEmail(email: string) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
 
   const onNext = () => {
     if (!validateEmail(email)) return;
